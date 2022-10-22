@@ -1,0 +1,48 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio Version 17
+VisualStudioVersion = 17.3.32929.385
+MinimumVisualStudioVersion = 10.0.40219.1
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "SharicFrontEndCommon", "SharicFrontEndCommon\SharicFrontEndCommon.csproj", "{8CAD6902-83C6-4800-8C08-09C01ACE24C6}"
+	ProjectSection(ProjectDependencies) = postProject
+		{93F1610C-C127-41FE-80A6-32E644C9E630} = {93F1610C-C127-41FE-80A6-32E644C9E630}
+	EndProjectSection
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "SharicWeb", "SharicWeb\SharicWeb.csproj", "{3BEEFB41-9400-4FCD-97E6-31A24864952F}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "SharicApp", "SharicApp\SharicApp.csproj", "{0B200694-8F7D-4D40-9187-9647C3DA3B4F}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "SharicCommon", "SharicCommon\SharicCommon.csproj", "{93F1610C-C127-41FE-80A6-32E644C9E630}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{8CAD6902-83C6-4800-8C08-09C01ACE24C6}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{8CAD6902-83C6-4800-8C08-09C01ACE24C6}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{8CAD6902-83C6-4800-8C08-09C01ACE24C6}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{8CAD6902-83C6-4800-8C08-09C01ACE24C6}.Release|Any CPU.Build.0 = Release|Any CPU
+		{3BEEFB41-9400-4FCD-97E6-31A24864952F}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{3BEEFB41-9400-4FCD-97E6-31A24864952F}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{3BEEFB41-9400-4FCD-97E6-31A24864952F}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{3BEEFB41-9400-4FCD-97E6-31A24864952F}.Release|Any CPU.Build.0 = Release|Any CPU
+		{0B200694-8F7D-4D40-9187-9647C3DA3B4F}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{0B200694-8F7D-4D40-9187-9647C3DA3B4F}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{0B200694-8F7D-4D40-9187-9647C3DA3B4F}.Debug|Any CPU.Deploy.0 = Debug|Any CPU
+		{0B200694-8F7D-4D40-9187-9647C3DA3B4F}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{0B200694-8F7D-4D40-9187-9647C3DA3B4F}.Release|Any CPU.Build.0 = Release|Any CPU
+		{0B200694-8F7D-4D40-9187-9647C3DA3B4F}.Release|Any CPU.Deploy.0 = Release|Any CPU
+		{93F1610C-C127-41FE-80A6-32E644C9E630}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{93F1610C-C127-41FE-80A6-32E644C9E630}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{93F1610C-C127-41FE-80A6-32E644C9E630}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{93F1610C-C127-41FE-80A6-32E644C9E630}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+	GlobalSection(ExtensibilityGlobals) = postSolution
+		SolutionGuid = {22BC89F7-A2DB-4A34-8E0F-9B3FFBEE7B47}
+	EndGlobalSection
+EndGlobal
