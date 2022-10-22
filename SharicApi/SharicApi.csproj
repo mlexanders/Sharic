@@ -25,7 +25,6 @@
 
   <ItemGroup>
     <Folder Include="db\" />
-    <Folder Include="Migrations\" />
   </ItemGroup>
 
   <ItemGroup>
