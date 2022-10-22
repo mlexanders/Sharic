@@ -1,4 +1,4 @@
-﻿namespace SharicApi.Controllers
+﻿namespace SharicCommon.Data.Difinitions
 {
     public enum Role
     {

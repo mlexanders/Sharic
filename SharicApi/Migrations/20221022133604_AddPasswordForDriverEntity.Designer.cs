@@ -2,6 +2,7 @@
 using System;
 using Microsoft.EntityFrameworkCore;
 using Microsoft.EntityFrameworkCore.Infrastructure;
+using Microsoft.EntityFrameworkCore.Migrations;
 using Microsoft.EntityFrameworkCore.Storage.ValueConversion;
 using SharicApi;
 
@@ -10,9 +11,10 @@ using SharicApi;
 namespace SharicApi.Migrations
 {
     [DbContext(typeof(AppDbContext))]
-    partial class AppDbContextModelSnapshot : ModelSnapshot
+    [Migration("20221022133604_AddPasswordForDriverEntity")]
+    partial class AddPasswordForDriverEntity
     {
-        protected override void BuildModel(ModelBuilder modelBuilder)
+        protected override void BuildTargetModel(ModelBuilder modelBuilder)
         {
 #pragma warning disable 612, 618
             modelBuilder.HasAnnotation("ProductVersion", "6.0.10");
@@ -27,7 +29,6 @@ namespace SharicApi.Migrations
                         .HasColumnType("INTEGER");
 
                     b.Property<string>("Token")
-                        .IsRequired()
                         .HasColumnType("TEXT");
 
                     b.HasKey("Id");
@@ -81,18 +82,13 @@ namespace SharicApi.Migrations
                     b.Property<bool>("IsFree")
                         .HasColumnType("INTEGER");
 
-                    b.Property<string>("Login")
+                    b.Property<string>("Password")
                         .HasColumnType("TEXT");
-
-                    b.Property<int>("PasswordId")
-                        .HasColumnType("INTEGER");
 
                     b.Property<string>("Token")
                         .HasColumnType("TEXT");
 
                     b.HasKey("Id");
-
-                    b.HasIndex("PasswordId");
 
                     b.ToTable("Drivers");
                 });
@@ -124,21 +120,6 @@ namespace SharicApi.Migrations
                     b.HasIndex("TripId");
 
                     b.ToTable("Tasks");
-                });
-
-            modelBuilder.Entity("SharicCommon.Data.Models.Password", b =>
-                {
-                    b.Property<int>("Id")
-                        .ValueGeneratedOnAdd()
-                        .HasColumnType("INTEGER");
-
-                    b.Property<string>("Value")
-                        .IsRequired()
-                        .HasColumnType("TEXT");
-
-                    b.HasKey("Id");
-
-                    b.ToTable("Password");
                 });
 
             modelBuilder.Entity("SharicCommon.Data.Models.Point", b =>
@@ -211,17 +192,6 @@ namespace SharicApi.Migrations
                     b.HasKey("Id");
 
                     b.ToTable("Trips");
-                });
-
-            modelBuilder.Entity("SharicCommon.Data.Models.Driver", b =>
-                {
-                    b.HasOne("SharicCommon.Data.Models.Password", "Password")
-                        .WithMany()
-                        .HasForeignKey("PasswordId")
-                        .OnDelete(DeleteBehavior.Cascade)
-                        .IsRequired();
-
-                    b.Navigation("Password");
                 });
 
             modelBuilder.Entity("SharicCommon.Data.Models.Issue", b =>
