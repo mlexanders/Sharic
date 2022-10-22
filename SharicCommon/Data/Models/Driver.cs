@@ -1,11 +1,11 @@
 ﻿using SharicApi.Repository;
 
-namespace SharicApi.Controllers
+namespace SharicCommon.Data.Models
 {
-    public class User : IEntity
+    public class Driver : IEntity
     {
         public int Id { get; set; }
         public string? Token { get; set; }
-        public Role Role { get; set; }
+        public bool IsFree { get; set; }
     }
 }
