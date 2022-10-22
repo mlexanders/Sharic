@@ -38,12 +38,12 @@ namespace SharicApi.Repository
 
         public virtual Task<TEntity> ReadFirst(Expression<Func<TEntity, bool>> query, params Expression<Func<TEntity, object>>[] includedProperties)
         {
-            return IncludProperties(includedProperties).FirstOrDefaultAsync(query);
+            return IncludeProperties(includedProperties).FirstOrDefaultAsync(query);
         }
 
         public virtual async Task<TEntity[]> Read(Func<TEntity, bool> query = null, params Expression<Func<TEntity, object>>[] includedProperties)
         {
-            return query != null ? IncludProperties(includedProperties).Where(query).ToArray() : IncludProperties(includedProperties).ToArray();
+            return query != null ? IncludeProperties(includedProperties).Where(query).ToArray() : IncludeProperties(includedProperties).ToArray();
         }
 
         public virtual async Task Update(TEntity entity)
@@ -96,7 +96,7 @@ namespace SharicApi.Repository
             }
         }
 
-        protected IQueryable<TEntity> IncludProperties(Expression<Func<TEntity, object>>[] includeProperties)
+        protected IQueryable<TEntity> IncludeProperties(Expression<Func<TEntity, object>>[] includeProperties)
         {
             return includeProperties.Aggregate(dbSet.AsNoTracking(), (query, includeProperty) => query.Include(includeProperty));
         }
