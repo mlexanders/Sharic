@@ -26,7 +26,10 @@
 
   <ItemGroup>
     <Folder Include="db\" />
-    <Folder Include="Migrations\" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <ProjectReference Include="..\SharicCommon\SharicCommon.csproj" />
   </ItemGroup>
 
   <ItemGroup>

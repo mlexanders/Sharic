@@ -1,4 +1,5 @@
 ﻿using SharicApi.Repository;
+using SharicCommon.Data.Difinitions;
 
 namespace SharicApi.Controllers
 {

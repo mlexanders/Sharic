@@ -1,5 +1,8 @@
 using Microsoft.EntityFrameworkCore;
 using SharicApi;
+using SharicApi.Controllers;
+using SharicApi.Repository;
+using SharicCommon.Data.Models;
 
 var builder = WebApplication.CreateBuilder(args);
 
@@ -17,6 +20,15 @@ builder.Services.AddDbContext<AppDbContext>(options =>
 {
     options.UseSqlite(connectionString);
 });
+
+
+builder.Services.AddTransient<BaseCrudRepository<Bus>>();
+builder.Services.AddTransient<BaseCrudRepository<Driver>>();
+builder.Services.AddTransient<BaseCrudRepository<Issue>>();
+builder.Services.AddTransient<BaseCrudRepository<Point>>();
+builder.Services.AddTransient<BaseCrudRepository<Road>>();
+builder.Services.AddTransient<BaseCrudRepository<Trip>>();
+builder.Services.AddTransient<BaseCrudRepository<User>>();
 
 var app = builder.Build();
 
