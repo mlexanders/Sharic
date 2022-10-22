@@ -21,11 +21,16 @@
     </PackageReference>
     <PackageReference Include="Microsoft.VisualStudio.Azure.Containers.Tools.Targets" Version="1.17.0" />
     <PackageReference Include="Swashbuckle.AspNetCore" Version="6.2.3" />
+    <PackageReference Include="System.IdentityModel.Tokens.Jwt" Version="6.24.0" />
   </ItemGroup>
 
   <ItemGroup>
     <Folder Include="db\" />
     <Folder Include="Migrations\" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <ProjectReference Include="..\SharicCommon\SharicCommon.csproj" />
   </ItemGroup>
 
 </Project>
