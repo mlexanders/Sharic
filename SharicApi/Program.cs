@@ -1,5 +1,7 @@
 using Microsoft.EntityFrameworkCore;
 using SharicApi;
+using SharicApi.Controllers;
+using SharicCommon.Data.Models;
 
 var builder = WebApplication.CreateBuilder(args);
 
@@ -19,7 +21,13 @@ builder.Services.AddDbContext<AppDbContext>(options =>
 });
 
 
-//builder.Services.AddTransient<>
+builder.Services.AddTransient<Bus>();
+builder.Services.AddTransient<Driver>();
+builder.Services.AddTransient<Issue>();
+builder.Services.AddTransient<Point>();
+builder.Services.AddTransient<Road>();
+builder.Services.AddTransient<Trip>();
+builder.Services.AddTransient<User>();
 
 var app = builder.Build();
 
