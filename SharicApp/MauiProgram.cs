@@ -1,7 +1,4 @@
-﻿using Microsoft.AspNetCore.Components.WebView.Maui;
-using SharicCommon.Data;
-using SharicFrontEndCommon;
-
+﻿using SharicCommon.Data;
 
 namespace SharicApp
 {
