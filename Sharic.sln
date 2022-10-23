@@ -14,7 +14,14 @@ Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "SharicApp", "SharicApp\Shar
 EndProject
 Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "SharicCommon", "SharicCommon\SharicCommon.csproj", "{93F1610C-C127-41FE-80A6-32E644C9E630}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "SharicApi", "SharicApi\SharicApi.csproj", "{D312A371-5008-4CAD-BF73-4C2598AF08B1}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "SharicApi", "SharicApi\SharicApi.csproj", "{D312A371-5008-4CAD-BF73-4C2598AF08B1}"
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Files", "Files", "{1F5E1FB0-F519-418F-BE11-555A0DDBF27F}"
+	ProjectSection(SolutionItems) = preProject
+		..\..\Distance.xlsx = ..\..\Distance.xlsx
+		..\..\Рейсы, пассажиры.xlsx = ..\..\Рейсы, пассажиры.xlsx
+		..\..\Шереметьево.docx = ..\..\Шереметьево.docx
+	EndProjectSection
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
