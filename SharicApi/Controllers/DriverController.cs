@@ -6,12 +6,11 @@ namespace SharicApi.Controllers
 {
     [Route("api/[controller]")]
     [ApiController]
-    //[Authorize(Roles = "ADMIN")]
-    public class UsersController : BaseCrudController<User>
+    public class DriverController : BaseCrudController<Driver>
     {
-        private readonly BaseCrudRepository<User> repository;
+        private readonly BaseCrudRepository<Driver> repository;
 
-        public UsersController(BaseCrudRepository<User> repository) : base(repository)
+        public DriverController(BaseCrudRepository<Driver> repository) : base(repository)
         {
             this.repository = repository;
         }
