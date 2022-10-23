@@ -6,6 +6,7 @@ using SharicApi;
 using SharicApi.Controllers;
 using SharicApi.Middlewares;
 using SharicApi.Repository;
+using SharicApi.Services;
 using SharicCommon.Data.Models;
 
 internal class Program
@@ -32,6 +33,7 @@ internal class Program
 
         RegistratePaths(builder.Services);
 
+
         builder.Services.AddTransient<BaseCrudRepository<Bus>>();
         builder.Services.AddTransient<BaseCrudRepository<Driver>>();
         builder.Services.AddTransient<BaseCrudRepository<Issue>>();
@@ -39,6 +41,11 @@ internal class Program
         builder.Services.AddTransient<BaseCrudRepository<Road>>();
         builder.Services.AddTransient<BaseCrudRepository<Trip>>();
         builder.Services.AddTransient<BaseCrudRepository<User>>();
+
+        builder.Services.AddTransient<IssueService>();
+
+        //builder.Services.AddSingleton<DateTimeService>(sp => sp.CreateScope<DateTimeService>());
+        //new BaseCrudRepository<Trip>(), new BaseCrudRepository<Trip>());
 
         var app = builder.Build();
 
@@ -61,6 +68,8 @@ internal class Program
         var serviceScopeForPermision = app.Services.CreateScope().ServiceProvider;
         app.UseMiddleware<CheckPermisionMiddleware>(serviceScopeForPermision.GetService<BaseCrudRepository<Driver>>());
 
+        //DateTimeService.SetTime += serviceScopeForPermision.GetService<IssueService>().Set;
+
         app.MapControllers();
 
         app.Run();
@@ -70,7 +79,9 @@ internal class Program
     {
         List<AvailablePath> availablePaths = new()
         {
-            new AvailablePath("/api/Auth", HttpMethod.Post)
+            new AvailablePath("/api/Auth", HttpMethod.Post),
+            new AvailablePath("/api/Time", HttpMethod.Get),
+            new AvailablePath("/api/Time", HttpMethod.Post)
         };
 
         sc.AddSingleton(availablePaths);
