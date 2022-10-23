@@ -1,4 +1,4 @@
-﻿namespace SharicApi.Repository
+﻿namespace SharicCommon.Data.Interfaces
 {
     public interface IEntity
     {

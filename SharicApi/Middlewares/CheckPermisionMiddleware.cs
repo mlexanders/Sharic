@@ -1,4 +1,5 @@
 ﻿using SharicApi.Controllers;
+using SharicApi.Models;
 using SharicApi.Repository;
 using SharicCommon.Data.Models;
 

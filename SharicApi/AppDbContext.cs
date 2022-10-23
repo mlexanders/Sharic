@@ -1,5 +1,4 @@
 ﻿using Microsoft.EntityFrameworkCore;
-using SharicApi.Controllers;
 using SharicCommon.Data.Difinitions;
 using SharicCommon.Data.Models;
 

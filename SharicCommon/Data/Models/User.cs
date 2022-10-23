@@ -1,7 +1,7 @@
-﻿using SharicApi.Repository;
-using SharicCommon.Data.Difinitions;
+﻿using SharicCommon.Data.Difinitions;
+using SharicCommon.Data.Interfaces;
 
-namespace SharicApi.Controllers
+namespace SharicCommon.Data.Models
 {
     public class User : IEntity
     {

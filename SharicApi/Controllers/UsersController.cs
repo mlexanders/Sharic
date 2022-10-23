@@ -1,5 +1,6 @@
 ﻿using Microsoft.AspNetCore.Mvc;
 using SharicApi.Repository;
+using SharicCommon.Data.Models;
 
 namespace SharicApi.Controllers
 {

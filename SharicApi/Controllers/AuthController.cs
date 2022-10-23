@@ -1,19 +1,12 @@
-﻿using Microsoft.AspNetCore.Authentication.OAuth;
-using Microsoft.AspNetCore.Mvc;
-using System.Security.Claims;
-using System;
-using System.IdentityModel.Tokens.Jwt;
-using Microsoft.IdentityModel.Tokens;
-using System.Text;
+﻿using Microsoft.AspNetCore.Mvc;
 using SharicApi.Repository;
-using Microsoft.AspNetCore.Authorization;
 using SharicCommon.Data.Models;
 
 namespace SharicApi.Controllers
 {
     [ApiController]
     [Route("api/[controller]")]
-    public class AuthController: ControllerBase
+    public class AuthController : ControllerBase
     {
         private readonly BaseCrudRepository<Driver> driversRepository;
         private readonly ILogger<Driver> logger;

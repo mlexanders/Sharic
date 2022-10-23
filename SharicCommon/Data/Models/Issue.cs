@@ -1,5 +1,5 @@
-﻿using SharicApi.Repository;
-using SharicCommon.Data.Difinitions;
+﻿using SharicCommon.Data.Difinitions;
+using SharicCommon.Data.Interfaces;
 
 namespace SharicCommon.Data.Models
 {

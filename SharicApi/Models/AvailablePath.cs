@@ -1,6 +1,6 @@
 ﻿using System.Net.Http;
 
-namespace SharicApi.Middlewares
+namespace SharicApi.Models
 {
     public class AvailablePath
     {
